@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx8pixr3ujv7e"]
+
+[ext_resource type="Texture2D" uid="uid://3mei48cr0je6" path="res://icon.svg" id="1_ob0ws"]
+
+[node name="bird" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(0.734375, 1)
+texture = ExtResource("1_ob0ws")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2.38419e-07, 0)
+scale = Vector2(0.734375, 1)
+polygon = PackedVector2Array(64, -59.6, 64, 59, 59.6, 64, -59, 64, -64, 59.6, -64, -59.6, -59, -63.9, 59, -64)
