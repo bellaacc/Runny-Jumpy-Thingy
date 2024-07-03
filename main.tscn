@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkmx6nks0n7a7"]
+[gd_scene load_steps=7 format=3 uid="uid://dkmx6nks0n7a7"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_dw678"]
 [ext_resource type="PackedScene" uid="uid://c4jfao66d85yx" path="res://background.tscn" id="1_qdsl1"]
 [ext_resource type="PackedScene" uid="uid://dhj4hipecvr7j" path="res://ground.tscn" id="2_qk3f5"]
 [ext_resource type="PackedScene" uid="uid://bxvfmkwcup85j" path="res://dino.tscn" id="3_uoa2r"]
 [ext_resource type="PackedScene" uid="uid://b7msfglcthqwh" path="res://hud.tscn" id="5_07a4b"]
+[ext_resource type="PackedScene" uid="uid://clg15wy1rrwd4" path="res://gameover.tscn" id="6_u1cn8"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_dw678")
@@ -20,3 +21,6 @@ position = Vector2(148, 521)
 anchor_mode = 0
 
 [node name="HUD" parent="." instance=ExtResource("5_07a4b")]
+
+[node name="gameover" parent="." instance=ExtResource("6_u1cn8")]
+process_mode = 2

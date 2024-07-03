@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx8pixr3ujv7e"]
+[gd_scene load_steps=3 format=3 uid="uid://bx8pixr3ujv7e"]
 
+[ext_resource type="Script" path="res://bird.gd" id="1_0m8a6"]
 [ext_resource type="Texture2D" uid="uid://3mei48cr0je6" path="res://icon.svg" id="1_ob0ws"]
 
 [node name="bird" type="Area2D"]
+script = ExtResource("1_0m8a6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2.38419e-07, 0)
