@@ -39,6 +39,10 @@ func new_game():
 	get_tree().paused = false
 	difficulty = 0
 	
+	#delete all the obstacles
+	for obs in obstacles:
+		obs.queue_free()
+	
 	#reset the nodes
 	#$dino.position = DINO_START_POS
 	#$dino.velocity = Vector2(0, 0)
@@ -97,7 +101,7 @@ func generate_obs():
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
 		#additionally random chance to spawn a bird
-		if difficulty == 0: #MAX_DIFFICULTY:
+		if difficulty == MAX_DIFFICULTY:
 			if (randi() % 2) == 0:
 				#generate bird obstacles
 				obs = bird_scene.instantiate()
@@ -121,6 +125,11 @@ func hit_obs(body):
 
 func show_score():
 	$HUD.get_node("scorelabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+
+func check_high_score():
+	if score > high_score:
+		high_score = score
+		$HUD.get_node("highscorelabel").text = "high score: " + str(high_score / SCORE_MODIFIER)
 
 func adjust_difficulty():
 	difficulty = score / SPEED_MODIFIER
